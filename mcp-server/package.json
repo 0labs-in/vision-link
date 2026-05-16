@@ -1,0 +1,72 @@
+{
+  "name": "vision-link",
+  "version": "1.4.0",
+  "description": "Universal MCP server that gives AI assistants the ability to watch and understand videos — extracts frames via ffmpeg and processes audio via multiple backends",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "vision-link": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "measure": "tsx scripts/measure-tokens.ts",
+    "test:gemini": "tsx scripts/test-gemini-api.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "js-tiktoken": "^1.0.21",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.5"
+  },
+  "optionalDependencies": {
+    "@google/genai": "^1.50.1",
+    "openai": "^4.80.0"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "video",
+    "vision",
+    "multimodal",
+    "ffmpeg",
+    "whisper",
+    "gemini",
+    "claude",
+    "chatgpt",
+    "cursor",
+    "vscode",
+    "copilot",
+    "universal",
+    "ai"
+  ],
+  "author": {
+    "name": "0labs",
+    "url": "https://github.com/0labs-in"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/0labs-in/vision-link",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0labs-in/vision-link.git"
+  },
+  "bugs": {
+    "url": "https://github.com/0labs-in/vision-link/issues"
+  }
+}

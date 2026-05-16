@@ -1,0 +1,7 @@
+{
+  "vision-link": {
+    "command": "npx",
+    "args": ["-y", "vision-link@latest"]
+  }
+}
+

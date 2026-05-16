@@ -1,0 +1,33 @@
+# Source files (only ship dist/)
+src/
+tests/
+scripts/
+
+# Development files
+*.test.ts
+*.spec.ts
+tsconfig.json
+vitest.config.ts
+
+# Documentation (keep README and LICENSE)
+docs/
+examples/
+
+# Build artifacts
+*.tsbuildinfo
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# CI/CD
+.github/
+
+# Misc
+*.log
+npm-debug.log*

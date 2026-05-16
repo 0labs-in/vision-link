@@ -1,0 +1,24 @@
+node_modules/
+dist/
+*.js.map
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Env / secrets
+.env
+.env.*
+
+# Plugin runtime config (user-specific)
+config.json
+
+# Temp files from video processing
+*.wav
+*.jpg
+*.png
+!mcp-server/tests/fixtures/*

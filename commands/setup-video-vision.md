@@ -4,9 +4,62 @@ description: "Interactive setup wizard for 0labs-vision — configure backend, w
 
 # Setup Video Vision
 
-Guide the user through configuring 0labs-vision step by step. Ask one question at a time using multiple choice. After each answer, proceed to the next step.
+Guide the user through configuring 0labs-vision with 3 setup modes.
 
-## Step 1: Backend Selection
+## First: Ask Setup Mode
+
+Ask the user to choose their setup mode:
+
+> How would you like to set up vision-link?
+>
+> **1) Quick Setup** (recommended) — Auto-configure everything with best defaults. One click, ready to go.
+>
+> **2) Advanced Setup** — Full control. Configure every option step-by-step.
+>
+> **3) Custom Setup** — Pick which settings to customize, use defaults for the rest.
+
+### Mode 1: Quick Setup
+
+If user chooses Quick Setup:
+
+1. Tell them: "Setting up with recommended defaults..."
+2. Call `video_configure` with these settings:
+   ```
+   backend: "local"
+   whisper_engine: "cpp"
+   whisper_model: "auto"
+   whisper_at: false
+   frame_resolution: 512
+   default_fps: "auto"
+   frame_mode: "images"
+   ```
+3. Call `video_setup` to verify dependencies
+4. Show: "✅ Quick setup complete! Ready to analyze videos."
+5. Skip to Step 5 (Test)
+
+### Mode 2: Advanced Setup
+
+If user chooses Advanced Setup, proceed to Step 1 below (ask every question).
+
+### Mode 3: Custom Setup
+
+If user chooses Custom Setup:
+
+Ask: "Which settings do you want to customize? (choose multiple)"
+
+> **a) Backend** (audio processing method)
+>
+> **b) Whisper settings** (model, engine)
+>
+> **c) Frame settings** (resolution, fps, mode)
+>
+> **d) None, use all defaults**
+
+Then only ask questions for the selected categories, use defaults for the rest.
+
+---
+
+## Step 1: Backend Selection (Advanced/Custom only)
 
 Ask the user:
 
@@ -125,9 +178,25 @@ If the user provides a video, call `video_watch` on it and show a brief summary 
 
 ## Important
 
-- Ask ONE question at a time — never combine multiple questions
+- **Quick Setup**: One call to `video_configure` with all defaults, then verify
+- **Advanced Setup**: Ask ONE question at a time, call `video_configure` after EACH answer
+- **Custom Setup**: Only ask about selected categories, use defaults for others
 - Use the multiple choice format consistently
-- Call `video_configure` after EACH answer to save incrementally
-- If the user says "default" or "just use defaults", set all defaults and skip to Step 4
-- If the user seems experienced, keep it concise — don't over-explain
+- If the user says "default" or "skip", use defaults for remaining questions
+- Keep it concise — don't over-explain unless the user asks
+
+## Default Values Reference
+
+```json
+{
+  "backend": "local",
+  "whisper_engine": "cpp",
+  "whisper_model": "auto",
+  "whisper_at": false,
+  "frame_resolution": 512,
+  "default_fps": "auto",
+  "frame_mode": "images",
+  "frame_describer_model": "sonnet"
+}
+```
 

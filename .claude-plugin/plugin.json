@@ -1,7 +1,7 @@
 {
   "name": "0labs-vision",
   "description": "Give Claude the ability to watch and understand videos — extracts frames and audio for full video perception",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": {
     "name": "0labs",
     "url": "https://github.com/0labs-in"

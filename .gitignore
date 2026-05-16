@@ -10,6 +10,9 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Claude Code session state
+.claude/
+
 # Env / secrets
 .env
 .env.*

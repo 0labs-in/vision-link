@@ -7,6 +7,24 @@ description: Use when the user mentions a video file (.mp4, .mov, .avi, .mkv, .w
 
 You have access to video understanding tools via the 0labs-vision MCP server.
 
+## CRITICAL: Setup Required First
+
+**Before using any video tools, the user MUST have completed setup.**
+
+Check setup status by reading `~/.0labs-vision/config.json`. If `backend` is `"unconfigured"` or the file doesn't exist:
+
+> 🎬 Vision-link needs setup first. Please run:
+>
+> **`/0labs-vision:setup-video-vision`**
+>
+> - **Quick Setup** — One-click with best defaults (recommended)
+> - **Advanced Setup** — Configure every option
+> - **Custom Setup** — Pick specific settings
+>
+> Settings can be changed anytime by running setup again.
+
+Only proceed with video tools after setup is verified.
+
 ## Available Tools
 
 - `video_analyze` — Analyze video structure with ffmpeg filters (scene changes, silence, motion, etc.). Use this BEFORE extracting frames to plan your strategy.

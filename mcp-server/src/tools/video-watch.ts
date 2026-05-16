@@ -33,16 +33,28 @@ const HMS_REGEX = /^\d{2}:\d{2}:\d{2}$/;
 
 const SESSIONS_DIR = join(homedir(), ".0labs-vision", "sessions");
 
-const UNCONFIGURED_MESSAGE = `## 0labs-vision is not configured yet!
+const UNCONFIGURED_MESSAGE = `## 🎬 vision-link is not configured yet!
 
-Please configure the plugin before using it. Run the setup tool or manually edit ~/.0labs-vision/config.json
+**Please run setup first before analyzing videos:**
 
-Available backends:
-- **Gemini API** — Best quality. Analyzes audio natively. Free tier: 1500 req/day. Requires GEMINI_API_KEY.
-- **Local (Whisper)** — Free, fully offline. Requires whisper.cpp or openai-whisper installed.
+### For Claude Code users:
+\`\`\`
+/0labs-vision:setup-video-vision
+\`\`\`
+
+Choose **Quick Setup** for instant configuration with best defaults, or pick Advanced/Custom for more control.
+
+### For other MCP clients:
+Call the \`video_setup\` tool, or manually edit \`~/.0labs-vision/config.json\`.
+
+### Available Backends:
+- **Gemini API** — Best quality. Free tier: 1500 req/day. Requires GEMINI_API_KEY.
+- **Local (Whisper)** — Free, fully offline. Requires whisper.cpp or openai-whisper.
 - **OpenAI Whisper API** — Good quality. Requires OPENAI_API_KEY.
 
-For setup instructions, visit: https://github.com/0labs-in/vision-link#setup`;
+**Settings can be changed anytime by re-running setup.**
+
+Documentation: https://github.com/0labs-in/vision-link#setup`;
 
 function timestampToFormattedFilename(timestamp: string, extension: string): string {
   return `${timestamp.replace(/:/g, "-")}.${extension}`;

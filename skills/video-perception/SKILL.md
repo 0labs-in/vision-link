@@ -5,7 +5,7 @@ description: Use when the user mentions a video file (.mp4, .mov, .avi, .mkv, .w
 
 # Video Perception
 
-You have access to video understanding tools via the 0labs-vision MCP server.
+You have access to video understanding tools via the vision-link MCP server.
 
 ## CRITICAL: Setup Required First
 
@@ -15,7 +15,7 @@ Check setup status by reading `~/.0labs-vision/config.json`. If `backend` is `"u
 
 > 🎬 Vision-link needs setup first. Please run:
 >
-> **`/0labs-vision:setup-video-vision`**
+> **`/vision-link:setup-video-vision`**
 >
 > - **Quick Setup** — One-click with best defaults (recommended)
 > - **Advanced Setup** — Configure every option

@@ -1,5 +1,5 @@
 {
-  "name": "0labs-vision",
+  "name": "vision-link",
   "description": "Give Claude the ability to watch and understand videos — extracts frames and audio for full video perception",
   "version": "1.5.0",
   "author": {

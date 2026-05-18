@@ -197,8 +197,8 @@ OpenCode uses the **MCP tools directly** — it doesn't have Claude Code's slash
 
 | Claude Code | OpenCode |
 |-------------|----------|
-| `/0labs-vision:watch-video path.mp4` | Ask: "Analyze this video: path.mp4" |
-| `/0labs-vision:setup-video-vision` | Ask: "Run video_setup" or call `video_configure` |
+| `/vision-link:watch-video path.mp4` | Ask: "Analyze this video: path.mp4" |
+| `/vision-link:setup-video-vision` | Ask: "Run video_setup" or call `video_configure` |
 | Automatic setup prompt | Manual configuration required |
 
 The underlying MCP server and tools work identically — only the interface differs.

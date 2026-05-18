@@ -14,15 +14,15 @@ argument-hint: "path/to/video.mp4 or YouTube URL [optional prompt or question ab
 
    > 🎬 Welcome to vision-link! Before analyzing videos, please run setup first:
    >
-   > **Run: `/0labs-vision:setup-video-vision`**
+   > **Run: `/vision-link:setup-video-vision`**
    >
    > Choose **Quick Setup** for instant configuration, or pick Advanced/Custom for more control.
    >
-   > After setup completes, run `/0labs-vision:watch-video` again with your video.
+   > After setup completes, run `/vision-link:watch-video` again with your video.
 
 3. If configured, proceed with the workflow below.
 
-**Note:** Users can re-run `/0labs-vision:setup-video-vision` anytime to change settings.
+**Note:** Users can re-run `/vision-link:setup-video-vision` anytime to change settings.
 
 ## Workflow (after setup is verified)
 
@@ -52,4 +52,4 @@ Then follow this workflow **in order — do NOT skip step 2**:
 5. If the user provided a prompt/question, answer it based on the video content.
 6. If no prompt was provided, give a comprehensive summary of what happens in the video.
 
-If `video_watch` fails with a setup error, redirect the user to run `/0labs-vision:setup-video-vision`.
+If `video_watch` fails with a setup error, redirect the user to run `/vision-link:setup-video-vision`.

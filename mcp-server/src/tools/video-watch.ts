@@ -39,7 +39,7 @@ const UNCONFIGURED_MESSAGE = `## 🎬 vision-link is not configured yet!
 
 ### For Claude Code users:
 \`\`\`
-/0labs-vision:setup-video-vision
+/vision-link:setup-video-vision
 \`\`\`
 
 Choose **Quick Setup** for instant configuration with best defaults, or pick Advanced/Custom for more control.

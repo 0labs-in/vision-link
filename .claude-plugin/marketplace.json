@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "0labs-vision",
+  "name": "vision-link",
   "description": "Give Claude the ability to watch and understand videos",
   "version": "1.5.0",
   "owner": {
@@ -9,7 +9,7 @@
   },
   "plugins": [
     {
-      "name": "0labs-vision",
+      "name": "vision-link",
       "description": "Give Claude the ability to watch and understand videos — extracts frames via ffmpeg and processes audio via Gemini API, local Whisper, or OpenAI API. Multimodal perception layer for Claude Code.",
       "version": "1.5.0",
       "source": "./",

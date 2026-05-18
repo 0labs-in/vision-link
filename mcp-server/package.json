@@ -1,6 +1,6 @@
 {
   "name": "vision-link",
-  "version": "1.5.0",
+  "version": "2.0.0",
   "description": "Universal MCP server that gives AI assistants the ability to watch and understand videos — extracts frames via ffmpeg and processes audio via multiple backends",
   "type": "module",
   "main": "dist/index.js",

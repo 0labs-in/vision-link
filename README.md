@@ -25,14 +25,6 @@ vision-link is an MCP server and optional Claude Code plugin that extracts frame
 - ✅ **Cursor IDE** - MCP support available
 - ✅ **Generic MCP clients** - Standard MCP protocol
 
-**Unverified:**
-- ⚠️ **ChatGPT Desktop** - MCP support not confirmed as of May 2026
-- ⚠️ **VS Code + GitHub Copilot** - MCP support not confirmed as of May 2026
-
-**Not Supported:**
-- ❌ **Google Gemini** - No MCP support
-- ❌ **Grok** - No MCP support
-
 See [docs/setup/](./docs/setup/) for platform-specific guides.
 
 ## Quick Start

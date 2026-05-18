@@ -15,7 +15,8 @@ vision-link is an MCP server and optional Claude Code plugin that extracts frame
 - **Flexible backends** — Choose between cloud APIs or fully local processing
 - **Adaptive extraction** — The server supports varying fps, time ranges, and resolution based on the request context
 - **Auto-installation** — Whisper models download automatically on first use
-- **Interactive setup wizard** — `/setup-video-vision` walks you through configuration
+- **Quick Setup wizard** — Three modes: Quick (one-click), Advanced (full control), Custom (pick what to configure)
+- **Auto-diagnostics** — `/vision-link:doctor` checks dependencies, config, and fixes common issues automatically
 
 ## Platform Support
 
@@ -40,7 +41,7 @@ Inside Claude Code, run these commands **one at a time**:
 Then:
 
 ```
-/plugin install 0labs-vision
+/plugin install vision-link
 ```
 
 The MCP server will auto-install via `npx` from [npm](https://www.npmjs.com/package/vision-link) on first use — no build step required.
@@ -52,24 +53,40 @@ git clone https://github.com/0labs-in/vision-link.git
 claude --plugin-dir /path/to/vision-link
 ```
 
-### 2. Configure
+### 2. Quick Setup (Recommended)
 
-Inside Claude Code, run the interactive wizard:
+Inside Claude Code, run the interactive setup wizard:
 
 ```
-/setup-video-vision
+/vision-link:setup-video-vision
 ```
 
-It will walk you through backend selection, whisper configuration (if local), frame options, and dependency verification.
+Choose **Quick Setup** for instant configuration with best defaults, or pick Advanced/Custom for full control.
+
+### 3. Troubleshooting
+
+If you encounter any setup issues, run the diagnostic tool:
+
+```
+/vision-link:doctor
+```
+
+Doctor will:
+- ✅ Check all dependencies (ffmpeg, whisper, yt-dlp)
+- ✅ Verify your configuration
+- ✅ Test PATH detection
+- ✅ Auto-fix common issues
+- ✅ Provide clear fix suggestions
 
 ## Usage
 
-### Slash command
+### Slash commands
 
 ```
-/watch-video path/to/video.mp4
-/watch-video tutorial.mp4 "what language is used in this tutorial?"
-/watch-video https://www.youtube.com/watch?v=... "summarize this video"
+/vision-link:watch-video path/to/video.mp4
+/vision-link:watch-video tutorial.mp4 "what language is used in this tutorial?"
+/vision-link:watch-video https://www.youtube.com/watch?v=... "summarize this video"
+/vision-link:doctor
 ```
 
 ### Conversational
